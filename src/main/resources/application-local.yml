@@ -1,0 +1,38 @@
+server:
+  port: 18085
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+#  datasource:
+#    myLocal:
+#      hikari:
+#        jdbcUrl: "jdbc:postgresql://localhost:5432/postgres"
+#        driverClassName: org.postgresql.Driver
+#        username: postgres
+#        password: postgres
+#        connectionTestQuery: SELECT 1
+#        connectionInitSql: SELECT 1
+#        maximumPoolSize: 100
+#        minimumIdle: 10
+#        idleTimeout: 30000
+#        connectionTimeout: 30000
+#        autoCommit: true
+#        readOnly: false
+#        dataSourceProperties:
+#          reWriteBatchedInserts: true
+#        poolName: da-postgres-db-pool
+kafka:
+  admin:
+    properties:
+      bootstrap:
+        servers: "localhost:9092"
+logging:
+  level:
+    root: INFO
+    '[analytics.scheduler]': DEBUG
+  charset:
+    console: UTF-8
+    file: UTF-8
